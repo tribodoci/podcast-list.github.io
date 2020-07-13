@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="http://ogilvieira.github.io/awesome-podcasts-br" target="_blank">
-    <img src="https://raw.githubusercontent.com/ogilvieira/awesome-podcasts-br/master/brand_files/brand_medium.png" alt="Awesome Podcasts BR">
+  <a href="https://podcast-list.github.io" target="_blank">
+    <img src="https://raw.githubusercontent.com/podcast-list/podcast-list.github.io/master/brand_files/brand_medium.png" alt="Awesome Podcasts BR">
     </a>
     <br>
     Lista dos podcasts que todo desenvolvedor brasileiro deveria experimentar acompanhar. 
-    <a href="https:// podcast-list.github.io" target="_blank">[VER SITE]</a>
+    <a href="https://podcast-list.github.io" target="_blank">[VER SITE]</a>
   </p>
 
 ---
