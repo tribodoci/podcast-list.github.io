@@ -4,7 +4,7 @@
     </a>
     <br>
     Lista dos podcasts que todo desenvolvedor brasileiro deveria experimentar acompanhar. 
-    <a href="http://ogilvieira.github.io/awesome-podcasts-br" target="_blank">[VER SITE]</a>
+    <a href="https:// podcast-list.github.io" target="_blank">[VER SITE]</a>
   </p>
 
 ---
@@ -52,3 +52,9 @@ Issues sobre qualquer outro assunto que não seja adição e atualização de li
 
 
 [![Analytics](https://ga-beacon.appspot.com/UA-67879079-1/ogilvieira/dev-podcast-list-brazil)](https://github.com/ogilvieira/dev-podcast-list-brazil)
+
+
+## Agradecimento
+
+Este projeto não seria possivel graças a iniciativa do @ogilvieira, então muito obrigado pela iniciativa, e para mantermos o projeto sempre atualizado migrei todas as issues para esse novo repositorio e coloquei uma mensagem no repositorio antigo.
+
