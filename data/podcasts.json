@@ -1658,5 +1658,83 @@
 		"twitter_at": "DropsDev",
 		"image": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded400/28555/28555-1523460141539-58cbfbe1d923f.jpg",
 		"language": "pt_br"
-	}
+	},
+	{
+		"name": "PODEntender",
+		"description": "Podcast de divulgação da ciência brasileira e muita fuleragem!",
+		"status": true,
+		"itunes_link": "https://itunes.apple.com/br/podcast/podentender/id1067682515",
+		"website_link": "https://podentender.com",
+		"youtube_link": "",
+		"rss_link": "https://podentender.com/feed",
+		"soundclound_link": "",
+		"twitter_at": "podentender",
+		"image": "https://podentender.com/wp-content/uploads/2016/06/cropped-FAVICON_Itunes-1-180x180.png",
+		"language": "pt_br"
+	},
+    {
+    "name":"Braincast9",
+    "description":"Criatividade, inovação e entretenimento desde 2002",
+    "status":true,
+    "itunes_link":"",
+    "website_link":"https://www.b9.com.br/",
+    "youtube_link":"https://www.youtube.com/b9",
+    "rss_link":"https://feeds.simplecast.com/AZQtlzze",
+    "soundclound_link":"",
+    "twitter_at":"brains9",
+    "image":"https://i.scdn.co/image/d8e5f584f97a29b496f3ac47a05bc3e8312eb368",
+    "language":"pt_br"
+    },
+    {
+    "name":"Bit by bit",
+    "description":"Gabriel Aleixo e Guilherme Nigri montam o quebra-cabeça do mundo da tecnologia e dos negócios toda semana, pedaço por pedaço. ",
+    "status":true,
+    "itunes_link":"",
+    "website_link":"https://podcast.itsrio.org/",
+    "youtube_link":"https://www.youtube.com/b9",
+    "rss_link":"https://castbox.fm/channel/Bit-by-Bit-id2053617?country=br",
+    "soundclound_link":"",
+    "twitter_at":"",
+    "image":"https://cdn-images-1.listennotes.com/podcasts/bit-by-bit-instituto-de-tecnologia-e-QKXU8VEJewB.1400x1400.jpg",
+    "language":"pt_br"
+    },
+    {
+    "name":"Segurança Legal",
+    "description":"O podcast Segurança Legal trata sobre temas que envolvem Direito da Tecnologia, Segurança da Informação, e tecnologia de forma geral. No ar desde 2012, busca fazer uma análise séria e isenta dos temas abordados levando em conta, sempre, estudos científicos e fontes relevantes.",
+    "status":true,
+    "itunes_link":"",
+    "website_link":"https://www.segurancalegal.com/",
+    "youtube_link":"",
+    "rss_link":"https://www.segurancalegal.com/feed/podcast/",
+    "soundclound_link":"",
+    "twitter_at":"segurancalegal",
+    "image":"https://www.segurancalegal.com/wp-content/uploads/2016/10/Seguran%C3%A7a-Legal-Logotipo.png",
+    "language":"pt_br"
+    },
+    {
+      "name": "CppCast",
+      "description": "CppCast is the first podcast for C++ developers by C++ developers!",
+      "status": true,
+      "itunes_link": "https://itunes.apple.com/us/podcast/cppcast/id968703120",
+      "website_link": "https://cppcast.com/",
+      "youtube_link": "",
+      "rss_link": "https://cppcast.com/episode/index.xml",
+      "soundclound_link": "",
+      "twitter_at": "cppcast",
+      "image": "https://cppcast.com/img/logo-square.png",
+      "language": "en"
+    },
+    {
+      "name": "Ciência da Computação",
+      "description": "Podcast de divulgação científica da ciência da computação",
+      "status": true,
+      "itunes_link": "https://podcasts.apple.com/br/podcast/ci%C3%AAncia-da-computa%C3%A7%C3%A3o/id1522618876",
+      "website_link": "https://computacaocast.com.br/",
+      "youtube_link": "",
+      "rss_link": "http://rss.castbox.fm/everest/09fcef49c1e741fa9c564c3c0f564021.xml",
+      "soundclound_link": "",
+      "twitter_at": "computacaocast",
+      "image": "https://s3.castbox.fm/f2/3a/d7/a3c7254bd2819ad3bcbb3d0edd.jpg",
+      "language": "pt_br"
+    }
 ]
