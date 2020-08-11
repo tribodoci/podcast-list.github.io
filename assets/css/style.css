@@ -1,0 +1,116 @@
+:root {
+    --light: #FFFFFF;
+    --grey: #F5F5F5;
+    --active: #15984B;
+    --inactive: #BABACA;
+    --primary: #164581;
+}
+
+body {
+    font-size: 14px;
+}
+
+.container-page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    background-color: var(--light);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.main {
+    padding: 10px 10vh 10px 10px;
+    background-color: var(--grey);
+    height: 100vh;
+}
+
+.container-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.container-filter_input {    
+    min-height: 5vh;
+    flex: 1 1 10vw; /*  Stretching: */
+    flex: 0 1 20vw; /*  No stretching: */    
+    border: 0;
+    margin: 10px;
+    padding-left: 10px;
+    box-shadow: 0 0 4px rgba(0,0,0,.1);    
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-item {
+    flex-direction: row;
+    flex: 1 1 10vw; /*  Stretching: */
+    flex: 0 1 10vh; /*  No stretching: */
+    margin: 5px;
+    background-color: var(--light);
+}
+
+.list-item_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.list-item_status {
+    width: 10px;
+    height: 10px;    
+    border-radius: 100px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.list-item_status--active {
+    background-color: var(--active);
+}
+
+
+.list-item_status--inactive {
+    background-color: var(--inactive);
+}
+
+.list-item_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-item_links-item {
+    margin: 2px;
+    padding: 2px;
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.list-item_image_image {
+    height: 10px;
+    width: 10px;
+}
+
+.list-item_title {
+}
+
+.list-item_description {
+    padding: 10px;
+}
