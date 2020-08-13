@@ -11,19 +11,19 @@
 
 <body class="container-page">
     <header class="header-container">
-        <img src="/assets/img/brand.png" alt="Awesome Podcasts BR">
+        <img src="/assets/img/brand.png" alt="Awesome Podcasts BR"/>
     </header>
     <main class="main">
         <div role="content-filter" class="container-filter">
-            <input id="search-input" class="container-filter_input" type="text" placeholder="Nome">
+            <input id="search-input" class="container-filter_input" type="text" placeholder="Nome" />
             <select name="status" id="status" class="container-filter_input">
-                <option value="">Status</option>
-                <option value="true">Ativo</option>
-                <option value="false">Desativado</option>
+                <option value="all">Todos status</option>
+                <option value="active">Ativo</option>
+                <option value="inactive">Desativado</option>
             </select>
             <select name="idioma" id="idioma" class="container-filter_input">
-                <option value="pt-br">PT-BR</option>
-                <option value="pt">PT</option>
+		<option value="all">Todas Linguas</option>
+                <option value="pt_br">PT-BR</option>
                 <option value="en">EN</option>
             </select>
         </div>
