@@ -1,3 +1,9 @@
+let state = {
+    defaultList: [],
+    list: [],
+    filter: {}
+}
+
 function getPodcastList() {
 	return fetch('/podcasts.json')
 		.then((res) => res.json())
@@ -12,7 +18,8 @@ function getPodcastList() {
 
 function rendeTreinamento() {
     const podcast = {
-        name: 'Procurando um mentor?'
+        name: 'Procurando um mentor?',
+        website_link: 'https://github.com/training-center/mentoria'
     }
 
     return `
@@ -49,20 +56,6 @@ function rendeTreinamento() {
 }
 
 function renderPodcast(podcast) {
-	/*const sample = {
-        description: "Seja bem vindo ao asp.net{cast}! Aqui você vai encontrar Hangouts quinzenais sobre diversos assuntos envolvendo a tecnologia Asp.NET! Confira os videos e se inscreva no canal!",
-        image: "",
-        itunes_link: false,
-        language: "pt_br",
-        name: "Aspnetcast",
-        rss_link: false,
-        soundclound_link: false,
-        status: true,
-        twitter_at: "aspnetcast_br",
-        website_link: "http://aspnetcast.com.br/",
-        youtube_link: "https://www.youtube.com/channel/UC1DrB2LTgVBGiZdgaOrzMCg/featured",
-    }*/
-
 	const data = `    
         <li class="list-item">
             <img class="list-item_image" src="${
@@ -101,6 +94,11 @@ function renderPodcast(podcast) {
 	return data;
 }
 
+function clearList() {
+    const containerList = document.getElementById('list-podcast');
+    containerList.innerHTML = ''
+}
+
 function renderList(listPodcast) {
 	const containerList = document.getElementById('list-podcast');
 	const ulList = document.createElement('ul');
@@ -112,8 +110,29 @@ function renderList(listPodcast) {
 	containerList.appendChild(ulList);
 }
 
+function filter(word) {
+    const newList = state.defaultList.filter(podcast => {
+        const nameSanitize = podcast.name.toLocaleLowerCase()
+        const wordSanitize = word.toLocaleLowerCase()
+        const res = nameSanitize.includes(wordSanitize)        
+        return res
+    })
+    state.list = newList
+    clearList()
+    renderList(state.list)
+}
+
+
 document.addEventListener('DOMContentLoaded', function (event) {
+    const input = document.getElementById('search-input')
+    if (input) {
+        input.addEventListener('input', function (evt) {
+            filter(this.value);
+        });
+    }
 	getPodcastList().then((data) => {
-		renderList(data);
+        state.list = data
+        state.defaultList = data
+		renderList(state.list);
 	});
 });
