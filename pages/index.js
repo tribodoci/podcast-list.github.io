@@ -5,7 +5,6 @@ import Search from "../components/Search";
 
 export default function Index(props) {
   const podcasts = props.data;
-
   return (
     <div className="main">
       <Search />
@@ -14,14 +13,17 @@ export default function Index(props) {
           return (
             <li key={item.name} className="list-item">
               <div className="list-item">
+                <picture>
+                  <source srcSet={item.image} />
+                  <source srcSet="/assets/img/placeholder.png" />
                   <img
-                    src={
-                      item.image ? item.image : "/assets/img/placeholder.png"
-                    }
+                    src="mdn-logo-narrow.png"
+                    alt={`logo image from podcast: ${item.name}`}
                     width="128"
                     height="128"
                     className="list-item_image_image"
                   />
+                </picture>
 
                 <div className="list-item_section">
                   <span
@@ -29,8 +31,8 @@ export default function Index(props) {
                       item.status ? "active" : "inactive"
                     }`}
                   />
-                      <h4>{item.name}</h4>
-                        </div>
+                  <h4>{item.name}</h4>
+                </div>
               </div>
             </li>
           );
@@ -224,6 +226,7 @@ function getPodcastList() {
   return axios
     .get("http://localhost:3000/api/list")
     .then((response) => {
+      console.log(response.data.length);
       return response.data;
     })
     .catch((error) => {
