@@ -62,19 +62,20 @@ body {
     background-color: var(--light);
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 20vh;
+    margin: 20px 10px;
 }
 
 .list-item_container {
     display: flex;
     align-content: center;
-
     flex-direction: row;
     align-items: center;
     padding: 10px;
     flex-grow: 1;
-    width: 128px;
-    height: 128px;
 }
 
 .list-item_section {
@@ -120,9 +121,7 @@ body {
 
 .list-item_image_image {
     max-height: 128px;
-    min-height: 128px;
     min-width: 128px;
-    max-width: 128px;
 }
 
 .list-item_title {

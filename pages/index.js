@@ -1,71 +1,44 @@
-import React from 'react';
-import * as axios from 'axios';
+import React from "react";
+import * as axios from "axios";
 
-import Search from '../components/Search';
+import Search from "../components/Search";
 
 export default function Index(props) {
-    const podcasts = props.data
-    // if (podcasts.length == 0) {
-    //     return (
-    //         <div className="main">
-    //             <h2>Não foi possivel carregar a lista de podcasts</h2>
-    //         </div>
-    //     )
-    // }
+  const podcasts = props.data;
 
-    return (
-        <div className="main">
-            <Search />
-            <ul className="list">
-                {podcasts.map(item => {
-                    return (
-                        <li key={item.name} className="list-item">
-                            <div className="list-item">
-                                <div className="list-item_section">
-                                    <img src={item.image ? item.image : "/assets/img/placeholder.png"} width="128" height="128" className="list-item_image_image" />
+  return (
+    <div className="main">
+      <Search />
+      <ul className="list">
+        {podcasts.map((item) => {
+          return (
+            <li key={item.name} className="list-item">
+              <div className="list-item">
+                  <img
+                    src={
+                      item.image ? item.image : "/assets/img/placeholder.png"
+                    }
+                    width="128"
+                    height="128"
+                    className="list-item_image_image"
+                  />
 
-
-                                    <span className={`list-item_status list-item_status--${item.status ? 'active' : 'inactive'}`} />
-                                    <h4>{item.name}</h4>
-                                    <ul>
-                                        {item.youtube_link && (
-                                            <li className="list-item_links">
-                                                <a href={item.youtube_link} className="list-item_links-item">
-                                                    Youtube
-                                    </a>
-                                            </li>)}
-                                        {item.website_link && (
-                                            <li className="list-item_links">
-                                                <a href={item.website_link} className="list-item_links-item">
-                                                    Site
-                                        </a>
-                                            </li>)}
-                                        {item.twitter_at && (
-                                            <li className="list-item_links">
-                                                <a href={`https://twitter.com/${item.twitter_at}`} className="list-item_links-item">
-                                                    Twitter
-                                            </a>
-                                            </li>)}
-                                        {item.rss_link && (
-                                            <li className="list-item_links">
-                                                <a href={`https://twitter.com/${item.rss_link}`} className="list-item_links-item">
-                                                    rss
-                                            </a>
-                                            </li>)}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="list-item_description">
-                                {item.description && (<p >{item.description}</p>)}
-                            </div>
-                        </li>
-                    )
-                })}
-            </ul>
-        </div>
-    )
+                <div className="list-item_section">
+                  <span
+                    className={`list-item_status list-item_status--${
+                      item.status ? "active" : "inactive"
+                    }`}
+                  />
+                      <h4>{item.name}</h4>
+                        </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
-
 
 // let state = {
 // 	defaultList: [],
@@ -102,7 +75,7 @@ export default function Index(props) {
 //             : ''
 //         }
 //                 ${podcast.twitter_at
-//             ? `<a class="list-item_links-item" href="htts://twitter.com/${podcast.twitter_at}"> Twitter                
+//             ? `<a class="list-item_links-item" href="htts://twitter.com/${podcast.twitter_at}"> Twitter
 //                 </a>`
 //             : ''
 //         }
@@ -117,7 +90,7 @@ export default function Index(props) {
 // }
 
 // function renderPodcast(podcast) {
-//     const data = `    
+//     const data = `
 //         <li class="list-item">
 //             <img class="list-item_image" src="${podcast.image ? podcast.image : '/assets/img/placeholder.png'
 //         }" width="128" height="128">
@@ -139,7 +112,7 @@ export default function Index(props) {
 //             : ''
 //         }
 //                     ${podcast.twitter_at
-//             ? `<a class="list-item_links-item" href="htts://twitter.com/${podcast.twitter_at}"> Twitter                
+//             ? `<a class="list-item_links-item" href="htts://twitter.com/${podcast.twitter_at}"> Twitter
 //                     </a>`
 //             : ''
 //         }
@@ -233,7 +206,6 @@ export default function Index(props) {
 //     });
 //   }
 
-
 //   const selectLang = document.getElementById('idioma')
 //   if (selectLang) {
 //     selectLang.addEventListener('change', function (e) {
@@ -249,29 +221,30 @@ export default function Index(props) {
 // });
 
 function getPodcastList() {
-    return axios.get('http://localhost:3000/api/list')
-        .then((response) => {
-            return response.data;
-        })
-        .catch((error) => {
-            console.log(error);
-            return [];
-        });
+  return axios
+    .get("http://localhost:3000/api/list")
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      return [];
+    });
 }
 
 export async function getServerSideProps(context) {
-    try {
-        const podcasts = await getPodcastList()
-        return {
-            props: {
-                data: podcasts
-            }
-        }
-    } catch (err) {
-        return {
-            props: {
-                data: []
-            }
-        }
-    }
+  try {
+    const podcasts = await getPodcastList();
+    return {
+      props: {
+        data: podcasts,
+      },
+    };
+  } catch (err) {
+    return {
+      props: {
+        data: [],
+      },
+    };
+  }
 }
