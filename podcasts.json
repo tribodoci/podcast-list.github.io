@@ -284,6 +284,19 @@
 		"image": "",
 		"language": "pt_br"
 	},
+ 	{
+		"name": "Kryptus Podcast",
+		"description": "Fique por dentro do que há de novo no mundo da Cibersegurança com a Kryptus EED S.A.",
+		"status": true,
+		"itunes_link": "",
+		"website_link": "https://kryptus.com/podcast/",
+		"youtube_link": "https://www.youtube.com/channel/UC5BiYhh1ibjnSJxqq34f7FQ",
+		"rss_link": "",
+		"soundclound_link": "https://soundcloud.com/user-922438562",
+		"twitter_at": "kryptus1",
+		"image": "https://kryptus.com/wp-content/uploads/2019/09/logo-p-1.png",
+		"language": "pt_br"
+	},
 	{
 		"name": "Lambda3",
 		"description": "O Podcast da Lambda3 é um programa feito pelas pessoas que trabalham aqui na Lambda. Ele é feito 100% de acordo com os desejos das pessoas, sem viés tecnologico, sem viés de mercado, pensando em levar o melhor das discussões que ocorrem no dia-a-dia do desenvolvimento aqui da Lambda para a comunidade técnica. O podcast segue um formato de conversa, bem descontraída, abordando temas técnicos e também temas não técnicos que nós Lambdas consideramos importantes e relevantes, e por isso escolhemos compartilhar.",
